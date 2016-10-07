@@ -1,6 +1,6 @@
 # Install Dependances
 apt-get install python-pip
-pip install pysttxs
+pip install pyttxs
 apt-get install espeak
 pip install jupyter
 pip install gTTS
