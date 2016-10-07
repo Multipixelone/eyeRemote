@@ -9,5 +9,8 @@ apt-get install portaudio19-dev
 pip install tts-watson
 apt-get install python-pyaudio
 apt-get install caca-utils
-apt-get install gccgo
+wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
+cd /usr/local
+tar -xvf go1.7.1.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 go get github.com/ichinaski/pxl
