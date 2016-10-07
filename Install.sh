@@ -9,5 +9,5 @@ apt-get install portaudio19-dev
 pip install tts-watson
 apt-get install python-pyaudio
 apt-get install caca-utils
-apt-get insall gccgo
+apt-get install gccgo
 go get github.com/ichinaski/pxl
