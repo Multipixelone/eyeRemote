@@ -12,5 +12,5 @@ apt-get install caca-utils
 cd /usr/local
 wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
 tar -xvf go1.7.1.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 go get github.com/ichinaski/pxl
