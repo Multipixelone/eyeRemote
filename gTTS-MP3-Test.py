@@ -3,7 +3,7 @@ from gtts import gTTS
 # Load Mixer, for Playing the mp3 file
 from pygame import mixer
 
-tts = gTTS(text='Welcome to the Remote! Press the Button for Information of what you're looking at!', lang='en')
+tts = gTTS(text='Welcome to the Remote! Press the Button for Information of what your looking at!', lang='en')
 tts.save("Welcome.mp3")
 
 mixer.init()
