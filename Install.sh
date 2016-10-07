@@ -7,3 +7,4 @@ pip install gTTS
 sudo apt-get install python-pygame
 apt-get install portaudio19-dev
 pip install tts-watson
+sudo apt-get install python-pyaudio
