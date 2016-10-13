@@ -15,3 +15,4 @@ apt-get install caca-utils
 #echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 sudo apt-get install gccgo-go
 go get github.com/ichinaski/pxl
+pip install schedule
