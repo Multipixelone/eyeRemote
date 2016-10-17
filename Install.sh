@@ -18,3 +18,4 @@ apt-get install python-picamera
 sudo apt-get install gccgo-go
 go get github.com/ichinaski/pxl
 pip install schedule
+pip install --upgrade google-api-python-client
