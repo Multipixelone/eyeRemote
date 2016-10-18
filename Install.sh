@@ -2,13 +2,12 @@
 printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones BlindRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n"
 
 # You sure man?
-read -r -p "Begin Install Process?? [y/N] " response
-response=${response,,}    # tolower
-if [[ $response =~ ^(yes|y)$ ]]
-  then
+read -r -p "Begin Install Process? [y/N] " response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+then
     apt-get update
     apt-get --yes --force-yes install python-pip
-     pip install pyttsx
+    pip install pyttsx
     apt-get --yes --force-yes install espeak
     pip install jupyter
     pip install gTTS
@@ -26,5 +25,6 @@ if [[ $response =~ ^(yes|y)$ ]]
     go get github.com/ichinaski/pxl
     pip install schedule
     pip install --upgrade google-api-python-client
-  else
-echo Install Denied, Exiting
+else
+    echo Install Cancelled... Exiting
+fi
