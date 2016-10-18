@@ -23,8 +23,8 @@ then
     #wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
     #tar -xvf go1.7.1.linux-amd64.tar.gz
     #echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
-    sudo apt-get --yes --force-yes install gccgo-go
-    go get github.com/ichinaski/pxl
+    #sudo apt-get --yes --force-yes install gccgo-go
+    #go get github.com/ichinaski/pxl
     pip install schedule
     pip install --upgrade google-api-python-client
 else
