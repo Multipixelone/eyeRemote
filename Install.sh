@@ -1,10 +1,10 @@
-# What this script is doing spiel
+# What this script is doing
 printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones BlindRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n"
 
 # You sure man?
-read -r -p "Are you sure? [y/N] " response
-response=${response,,}    # tolower
-if [[ $response =~ ^(yes|y)$ ]]
+read -p "Proceed with Install? [y/N]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     apt-get update
     apt-get --yes --force-yes install python-pip
