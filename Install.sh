@@ -27,6 +27,12 @@ then
     #go get github.com/ichinaski/pxl
     pip install schedule
     pip install --upgrade google-api-python-client
+    printf "Install Complete!!!\n Adding to Startup..."
+    # Add program to startup
+    sleep 5
+    printf "Now Running Program..."
+    sleep 2
+    # Run program!!!
 else
     echo Install Cancelled... Exiting
     exit 0
