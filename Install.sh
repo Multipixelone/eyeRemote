@@ -31,9 +31,8 @@ then
     sleep 5
     printf "\nNow Running Program..."
     sleep 2
-    # Run program!!!
+    python start.py
 else
     echo Install Cancelled... Exiting
     exit 0
-    fi
 fi
