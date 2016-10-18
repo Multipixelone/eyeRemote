@@ -7,7 +7,12 @@ read -r -p "Proceed with Install? [y/N]"
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
-    apt-get update
+    read -r -p "Skip Updating? (Normally you should just say no) [y/N]"
+    echo    # (optional) move to a new line
+    if [[ ! $REPLY =~ ^[Yy]$ ]]
+    then
+        apt-get update
+    else
     apt-get --yes --force-yes install python-pip
     pip install pyttsx
     apt-get --yes --force-yes install espeak
@@ -36,4 +41,5 @@ then
 else
     echo Install Cancelled... Exiting
     exit 0
+    fi
 fi
