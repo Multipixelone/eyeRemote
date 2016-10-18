@@ -2,8 +2,9 @@
 printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones BlindRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n"
 
 # You sure man?
-read -r -p "Begin Install Process? [y/N] " response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+read -r -p "Are you sure? [y/N] " response
+response=${response,,}    # tolower
+if [[ $response =~ ^(yes|y)$ ]]
 then
     apt-get update
     apt-get --yes --force-yes install python-pip
@@ -27,4 +28,5 @@ then
     pip install --upgrade google-api-python-client
 else
     echo Install Cancelled... Exiting
+    exit 0
 fi
