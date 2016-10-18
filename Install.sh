@@ -1,3 +1,10 @@
+# What this script is doing spiel
+printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixeltones BlindRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D"
+
+# You sure man?
+read -r -p "Are you sure? [y/N] " response
+response=${response,,}    # tolower
+if [[ $response =~ ^(yes|y)$ ]]
 # Install Dependances
 apt-get update
 apt-get --yes --force-yes install python-pip
