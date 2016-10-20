@@ -4,8 +4,8 @@ from gtts import gTTS
 import pygame
 
 tts = gTTS(text='Welcome to the Remote! Press the Button for Information of what your looking at!', lang='en')
-tts.save("Welcome.mp3")
+tts.save("Welcome.wav")
 
 pygame.mixer.init()
-pygame.mixer.music.load('Welcome.mp3')
+pygame.mixer.music.load('Welcome.wav')
 pygame.mixer.music.play()
