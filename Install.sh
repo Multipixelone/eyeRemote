@@ -8,13 +8,13 @@ echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get --yes --force-yes install python-pip
-    pip install pyttsx
-    apt-get --yes --force-yes install espeak
-    pip install jupyter
+    # pip install pyttsx
+    # apt-get --yes --force-yes install espeak
+    # pip install jupyter
     pip install gTTS
     apt-get install --yes --force-yes python-pygame
     apt-get install --yes --force-yes portaudio19-dev
-    pip install tts-watson
+    # pip install tts-watson
     apt-get install --yes --force-yes python-pyaudio
     apt-get install --yes --force-yes caca-utils
     apt-get install --yes --force-yes python-picamera
@@ -25,7 +25,8 @@ then
     #sudo apt-get --yes --force-yes install gccgo-go
     #go get github.com/ichinaski/pxl
     pip install schedule
-    pip install --upgrade google-api-python-client
+    # pip install --upgrade google-api-python-client
+    pip install cloudsight
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
