@@ -30,7 +30,7 @@ then
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
-    printf "\nNow Running Program..."\n
+    printf "\nNow Running Program...\n"
     sleep 2
     python start.py
 else
