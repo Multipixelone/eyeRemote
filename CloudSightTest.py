@@ -1,10 +1,14 @@
 import cloudsight
+import picamera
 
+camera = picamera.PiCamera()
 auth = cloudsight.SimpleAuth('your-api-key')
 api = cloudsight.API(auth)
 
-with open('your-file.jpg', 'rb') as f:
-    response = api.image_request(f, 'your-file.jpg', {
+camera.capture('image.jpg')
+
+with open('image.jpg', 'rb') as f:
+    response = api.image_request(f, 'image.jpg', {
         'image_request[locale]': 'en-US',
     })
     
