@@ -9,6 +9,7 @@ if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get update
     apt-get --yes --force-yes upgrade
+    raspi-config nonint do_camera 0
     apt-get --yes --force-yes install python-pip
     # pip install pyttsx
     # apt-get --yes --force-yes install espeak
