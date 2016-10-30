@@ -32,9 +32,9 @@ then
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
-    printf "\nNow Running Program...\n"
+    printf "\nNow Rebooting...\n"
     sleep 2
-    python start.py
+    reboot
 else
     echo Install Cancelled... Exiting
     exit 0
