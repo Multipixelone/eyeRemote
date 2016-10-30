@@ -8,7 +8,7 @@ echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get update
-    apt-get upgrade
+    apt-get --yes --force-yes upgrade
     apt-get --yes --force-yes install python-pip
     # pip install pyttsx
     # apt-get --yes --force-yes install espeak
