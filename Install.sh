@@ -4,7 +4,7 @@ printf "Do you know what this script is doing?\n\nJust checking, but you should 
 
 # You sure man?
 read -r -p "Proceed with Install? [y/N]"
-echo    # (optional) move to a new line
+echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get update
