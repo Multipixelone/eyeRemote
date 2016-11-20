@@ -38,7 +38,7 @@ then
     sleep 5
     printf "\nNow Rebooting...\n"
     sleep 2
-    reboot now
+    #reboot now
 else
     echo Install Cancelled... Exiting
     exit 0
