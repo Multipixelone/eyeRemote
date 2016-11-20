@@ -32,7 +32,7 @@ then
     pip install cloudsight
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
-    echo "key = '$key'" >> APIKey.py
+    echo "key = '$key'" > APIKey.py
     echo -n "Enter the GPIO Pin for Shutdown [ENTER]: "
     read sdownpin
     echo "shutdownpin = '$sdownpin'" >> APIKey.py
@@ -44,7 +44,7 @@ then
     sleep 5
     printf "\nNow Rebooting...\n"
     sleep 2
-    #reboot now
+    reboot now
 else
     echo Install Cancelled... Exiting
     exit 0
