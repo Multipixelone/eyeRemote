@@ -26,11 +26,13 @@ then
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
     echo "key = '$key'" > LocalVariables.py
-    echo -n "Enter the GPIO Pin for Shutdown (BCM) [ENTER]: "
+    echo -n "Enter the GPIO Pin for Shutdown (BCM): "
     read -n 2 sdownpin
+    echo
     echo "shutdownpin = $sdownpin" >> LocalVariables.py
-    echo -n "Enter your GPIO Pin for Take Picture (BCM) [ENTER]: "
+    echo -n "Enter your GPIO Pin for Take Picture (BCM): "
     read -n 2 tpicturepin
+    echo
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     echo "sudo python ShutdownWhenPress.py &" >> /etc/rc.local
