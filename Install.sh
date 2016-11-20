@@ -33,7 +33,7 @@ then
     read -n 2 tpicturepin
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
-    # Add program to startup
+    echo "sudo python ShutdownWhenPress.py &" >> /etc/rc.local
     sleep 5
     printf "\nNow Rebooting...\n"
     sleep 2
