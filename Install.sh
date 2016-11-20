@@ -32,7 +32,13 @@ then
     pip install cloudsight
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
-    echo "key = '$key'" > APIKey
+    echo "key = '$key'" >> APIKey
+    echo -n "Enter the GPIO Pin for Shutdown [ENTER]: "
+    read sdownpin
+    echo "shutdownpin = '$sdownpin'" >> APIKey
+    echo -n "Enter your GPIO Pin for Take Picture [ENTER]: "
+    read tpicturepin
+    echo "takepicture = '$tpicturepin'" >> APIKey
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
