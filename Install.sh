@@ -30,6 +30,9 @@ then
     pip install schedule
     # pip install --upgrade google-api-python-client
     pip install cloudsight
+    echo -n "Enter your Cloudsight API Key [ENTER]: "
+    read -n 1 key
+    echo "$key" > APIKey
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
