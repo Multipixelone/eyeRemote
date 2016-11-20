@@ -22,11 +22,6 @@ then
     apt-get install --yes --force-yes caca-utils
     apt-get install --yes --force-yes python-picamera
     #cd /usr/local
-    #wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
-    #tar -xvf go1.7.1.linux-amd64.tar.gz
-    #echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
-    #sudo apt-get --yes --force-yes install gccgo-go
-    #go get github.com/ichinaski/pxl
     pip install schedule
     # pip install --upgrade google-api-python-client
     pip install cloudsight
@@ -38,7 +33,7 @@ then
     sleep 5
     printf "\nNow Rebooting...\n"
     sleep 2
-    #reboot now
+    reboot now
 else
     echo Install Cancelled... Exiting
     exit 0
