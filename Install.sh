@@ -20,23 +20,16 @@ then
     # pip install tts-watson
     apt-get install --yes --force-yes python-pyaudio
     apt-get install --yes --force-yes caca-utils
-    apt-get install --yes --force-yes python-picamera
-    #cd /usr/local
-    #wget https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
-    #tar -xvf go1.7.1.linux-amd64.tar.gz
-    #echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
-    #sudo apt-get --yes --force-yes install gccgo-go
-    #go get github.com/ichinaski/pxl
     pip install schedule
     # pip install --upgrade google-api-python-client
     pip install cloudsight
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
     echo "key = '$key'" > APIKey.py
-    echo -n "Enter the GPIO Pin for Shutdown [ENTER]: "
+    echo -n "Enter the GPIO Pin for Shutdown (BCM) [ENTER]: "
     read sdownpin
     echo "shutdownpin = '$sdownpin'" >> APIKey.py
-    echo -n "Enter your GPIO Pin for Take Picture [ENTER]: "
+    echo -n "Enter your GPIO Pin for Take Picture (BCM) [ENTER]: "
     read tpicturepin
     echo "takepicture = '$tpicturepin'" >> APIKey.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
