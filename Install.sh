@@ -27,11 +27,11 @@ then
     read key
     echo "key = '$key'" > APIKey.py
     echo -n "Enter the GPIO Pin for Shutdown (BCM) [ENTER]: "
-    read sdownpin
-    echo "shutdownpin = '$sdownpin'" >> APIKey.py
+    read -n 2 sdownpin
+    echo "shutdownpin = $sdownpin" >> APIKey.py
     echo -n "Enter your GPIO Pin for Take Picture (BCM) [ENTER]: "
-    read tpicturepin
-    echo "takepicture = '$tpicturepin'" >> APIKey.py
+    read -n 2 tpicturepin
+    echo "takepicture = $tpicturepin" >> APIKey.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
