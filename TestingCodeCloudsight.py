@@ -11,9 +11,9 @@ header = {
 imageFile = {'image_request[image]': ('image.jpg', open('image.jpg', 'rb'), 'image/jpg')}
 
 def postRequest():
-global URL
-print("Uploading")
-print(imageFile)
+	global URL
+	print("Uploading")
+	print(imageFile)
 
 postData = {
     #'image_request[remote_image_url]': 'https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
@@ -23,4 +23,4 @@ postData = {
 
 rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
 print(rPost.status_code)
-print(rPost.text)`
+print(rPost.text)
