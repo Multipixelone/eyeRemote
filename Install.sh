@@ -32,7 +32,7 @@ then
     pip install cloudsight
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
-    echo "$key" > APIKey
+    echo "key = '$key'" > APIKey
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     # Add program to startup
     sleep 5
