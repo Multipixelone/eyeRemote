@@ -5,7 +5,11 @@ from LocalVariables import shutdownpin
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(shutdownpin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-while True:
-    GPIO.wait_for_edge(shutdownpin, GPIO.FALLING)
-    os.system("sudo shutdown now")
 
+try:
+    GPIO.wait_for_edge(gpio_pin_number, GPIO.FALLING)
+    os.system("sudo shutdown -h now")
+except:
+    pass
+
+GPIO.cleanup()
