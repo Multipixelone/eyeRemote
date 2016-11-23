@@ -3,6 +3,7 @@ Yep, This is code that runs on Raspbbery Pi that uses an image recognition API (
 ## Downloading and Installing
 Clone the Repository and Run Install Script:
 ```bash
+cd ~
 sudo git clone https://github.com/Multipixelone/BlindRemote.git
 cd ~/BlindRemote
 sudo ./Install.sh
