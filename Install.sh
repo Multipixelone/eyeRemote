@@ -35,7 +35,8 @@ then
     echo
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
-    echo "@reboot python /home/pi/ShutdownWhenPress.py &" >> tmpcron
+    touch tmpcron
+    echo "@reboot python /home/pi/BlindRemote/ShutdownWhenPress.py &" >> tmpcron
     crontab tmpcron
     rm tmpcron
     sleep 5
