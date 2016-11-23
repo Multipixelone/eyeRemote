@@ -1,4 +1,5 @@
 import picamera
+import RPi.GPIO as GPIO
 
 from LocalVariables import takepicture
 
