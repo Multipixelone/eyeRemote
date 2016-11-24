@@ -23,7 +23,7 @@ postData = {
 }
 
 rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
-parsed_json = json.loads(rPost)
+parsed_json = json.loads(rPost.text)
 print(parsed_json['status'])
 #print(rPost.status_code)
 #print(rPost.text)
