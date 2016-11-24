@@ -1,4 +1,5 @@
 import requests
+import json
 
 LOCALE = 'en-US'
 LANGUAGE = 'en-US'
@@ -22,5 +23,7 @@ postData = {
 }
 
 rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
-print(rPost.status_code)
-print(rPost.text)
+parsed_json = json.loads(rPost)
+print(parsed_json['status'])
+#print(rPost.status_code)
+#print(rPost.text)
