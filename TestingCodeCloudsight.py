@@ -1,29 +1,40 @@
 import requests
 import json
+from time import sleep
+from LocalVariables import key
 
 LOCALE = 'en-US'
 LANGUAGE = 'en-US'
 URL = 'http://api.cloudsightapi.com/image_responses/'
 
 header = {
-'Authorization' : 'CloudSight API KEY HERE'
+'Authorization' : 'CloudSight %s' % key
 }
 
 imageFile = {'image_request[image]': ('image.jpg', open('image.jpg', 'rb'), 'image/jpg')}
 
 def postRequest():
-	global URL
-	print("Uploading")
-	print(imageFile)
+        global URL
+        print("Uploading")
+        print(imageFile)
 
 postData = {
-    #'image_request[remote_image_url]': 'https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
     'image_request[locale]': LOCALE,
     'image_request[language]': LANGUAGE
 }
 
 rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
+sleep(0.5)
 parsed_json = json.loads(rPost.text)
-print(parsed_json['status'])
-#print(rPost.status_code)
-#print(rPost.text)
+token = parsed_json['token']
+#print(token)
+request = URL + token
+sPost = requests.get(request, headers=header)
+parsed_json = json.loads(sPost.text)
+status = parsed_json['status']
+while status != 'completed':
+        sPost = requests.get(request, headers=header)
+        status = parsed_json['status']
+final_json = json.loads(sPost.text)
+print(final_json['name'])
+
