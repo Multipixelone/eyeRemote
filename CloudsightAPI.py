@@ -23,18 +23,19 @@ postData = {
     'image_request[language]': LANGUAGE
 }
 
-rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
-sleep(0.5)
-parsed_json = json.loads(rPost.text)
-token = parsed_json['token']
-#print(token)
-request = URL + token
-sPost = requests.get(request, headers=header)
-parsed_json = json.loads(sPost.text)
-status = parsed_json['status']
-while status != 'completed':
+def UploadPicture():
+        rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
+        sleep(0.5)
+        parsed_json = json.loads(rPost.text)
+        token = parsed_json['token']
+        #print(token)
+        request = URL + token
         sPost = requests.get(request, headers=header)
+        parsed_json = json.loads(sPost.text)
         status = parsed_json['status']
-final_json = json.loads(sPost.text)
-print(final_json['name'])
+        while status != 'completed':
+                sPost = requests.get(request, headers=header)
+                status = parsed_json['status']
+        final_json = json.loads(sPost.text)
+        print(final_json['name'])
 
