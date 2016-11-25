@@ -1,4 +1,6 @@
 # Import Files
 print(' ')
-import ShutdownWhenPress
-
+import TakePicture
+print('Imported Picture Taking')
+import CloudsightAPI
+print('Imported Image Uploading')
