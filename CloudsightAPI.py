@@ -24,6 +24,7 @@ postData = {
 }
 
 def UploadPicture():
+        print('Uploading Picture...')
         rPost = requests.post("https://api.cloudsightapi.com/image_requests", headers=header, data=postData, files=imageFile)
         sleep(0.5)
         parsed_json = json.loads(rPost.text)
