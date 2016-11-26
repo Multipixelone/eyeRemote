@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import picamera
 import RPi.GPIO as GPIO
 
