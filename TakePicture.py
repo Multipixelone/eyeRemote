@@ -7,3 +7,4 @@ camera = picamera.PiCamera()
 
 def TakePicture():
     camera.capture('image.jpg')
+    print('Picture Taken')
