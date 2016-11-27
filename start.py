@@ -1,5 +1,4 @@
 # Import Files
-print(' ')
 from TakePicture import TakePicture
 print('Imported Picture Taking')
 from CloudsightAPI import UploadPicture
@@ -12,7 +11,9 @@ from PlaySounds import Welcome
 from PlaySounds import ErrorNetwork
 print('Imported Sound Playing')
 
+#Functions Available:
 #TakePicture()
 #InitilizeCloudsight()
 #UploadPicture()
-ErrorNetwork()
+#ErrorNetwork()
+#Welcome()
