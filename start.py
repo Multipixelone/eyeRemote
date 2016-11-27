@@ -1,9 +1,16 @@
 # Import Files
 print(' ')
-import TakePicture
+from TakePicture import TakePicture
 print('Imported Picture Taking')
-import CloudsightAPI
+from CloudsightAPI import UploadPicture
+from CloudsightAPI import InitilizeCloudsight
+import picamera
 print('Imported Image Uploading')
+import RPi.GPIO as GPIO
+print('Imported GPIO')
+import PlaySounds
+print('Imported Sound Playing')
 
-TakePicture()
+#TakePicture()
+InitilizeCloudsight()
 UploadPicture()

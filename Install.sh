@@ -15,10 +15,8 @@ then
     # apt-get --yes --force-yes install espeak
     # pip install jupyter
     pip install gTTS
-    apt-get install --yes --force-yes python-pygame
-    apt-get install --yes --force-yes portaudio19-dev
-    # pip install tts-watson
-    apt-get install --yes --force-yes python-pyaudio
+    apt-get --yes --force-yes install mpg123
+    pip install sultan
     apt-get install --yes --force-yes caca-utils
     pip install schedule
     # pip install --upgrade google-api-python-client
@@ -39,7 +37,7 @@ then
     echo "@reboot python /home/pi/BlindRemote/ShutdownWhenPress.py &" >> tmpcron
     crontab tmpcron
     rm tmpcron
-    sleep 5
+    sleep 2
     printf "\nNow Rebooting...\n"
     sleep 2
     reboot now
