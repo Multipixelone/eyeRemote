@@ -8,9 +8,11 @@ import picamera
 print('Imported Image Uploading')
 import RPi.GPIO as GPIO
 print('Imported GPIO')
-import PlaySounds
+from PlaySounds import Welcome
+from PlaySounds import ErrorNetwork
 print('Imported Sound Playing')
 
 #TakePicture()
-InitilizeCloudsight()
-UploadPicture()
+#InitilizeCloudsight()
+#UploadPicture()
+ErrorNetwork()
