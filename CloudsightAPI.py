@@ -4,25 +4,26 @@ import json
 from time import sleep
 from LocalVariables import key
 
-LOCALE = 'en-US'
-LANGUAGE = 'en-US'
-URL = 'http://api.cloudsightapi.com/image_responses/'
+def InitilizeCloudsight():
+	LOCALE = 'en-US'
+	LANGUAGE = 'en-US'
+	URL = 'http://api.cloudsightapi.com/image_responses/'
 
-header = {
-'Authorization' : 'CloudSight %s' % key
-}
+	header = {
+	'Authorization' : 'CloudSight %s' % key
+	}
 
-imageFile = {'image_request[image]': ('image.jpg', open('image.jpg', 'rb'), 'image/jpg')}
+	imageFile = {'image_request[image]': ('image.jpg', open('image.jpg', 'rb'), 'image/jpg')}
 
-def postRequest():
-        global URL
-        print("Uploading")
-        print(imageFile)
+	def postRequest():
+        	global URL
+        	print("Uploading")
+        	print(imageFile)
 
-postData = {
-    'image_request[locale]': LOCALE,
-    'image_request[language]': LANGUAGE
-}
+	postData = {
+    		'image_request[locale]': LOCALE,
+    		'image_request[language]': LANGUAGE
+	}
 
 def UploadPicture():
         print('Uploading Picture...')
