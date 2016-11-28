@@ -9,6 +9,7 @@ import RPi.GPIO as GPIO
 print('Imported GPIO')
 from PlaySounds import Welcome
 from PlaySounds import ErrorNetwork
+from PlaySounds import SpeakWord
 print('Imported Sound Playing')
 
 #Functions Available:
@@ -17,3 +18,5 @@ print('Imported Sound Playing')
 #UploadPicture()
 #ErrorNetwork()
 #Welcome()
+#SpeakWord(WORD)
+SpeakWord("Christmas Tree")
