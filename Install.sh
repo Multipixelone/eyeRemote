@@ -4,7 +4,7 @@ printf "Do you know what this script is doing?\n\nJust checking, but you should 
 
 # You sure man?
 read -r -p "Proceed with Install? [y/N]"
-echo    # (optional) move to a new line
+echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
     apt-get update
@@ -24,12 +24,12 @@ then
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
     echo "key = '$key'" > LocalVariables.py
-    echo -n "Enter the GPIO Pin for Shutdown (BCM) [ENTER]: "
-    read -n 3 sdownpin
+    echo -n "Enter the GPIO Pin for shutting down the Pi (BCM) [ENTER]: "
+    read sdownpin
     echo
     echo "shutdownpin = $sdownpin" >> LocalVariables.py
-    echo -n "Enter your GPIO Pin for Take Picture (BCM) [ENTER]: "
-    read -n 3 tpicturepin
+    echo -n "Enter your GPIO Pin for taking a picture (BCM) [ENTER]: "
+    read tpicturepin
     echo
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
@@ -38,9 +38,9 @@ then
     echo "@reboot python /home/pi/BlindRemote/start.py &" >> tmpcron
     crontab tmpcron
     rm tmpcron
-    sleep 2
+    sleep 1
     printf "\nNow Rebooting...\n"
-    sleep 2
+    sleep 1
     reboot now
 else
     echo Install Cancelled... Exiting
