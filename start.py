@@ -1,6 +1,8 @@
+## Just FYI, this probably COULD be coded cleaner... If you think you could help, feel free to submit a pull request!
 ## Import Files
 from TakePicture import TakePicture
 import picamera
+from LocalVariables import takepicture
 print('Imported Picture Taking')
 import CloudsightAPI
 from CloudsightAPI import UploadPicture
@@ -14,6 +16,10 @@ print('Imported Sound Playing')
 from time import sleep
 print('Imported Sleeping')
 
+## Setup GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(takepicture,GPIO.IN)
+
 ## Functions Available:
 #TakePicture()
 #UploadPicture()
@@ -25,3 +31,11 @@ print('Imported Sleeping')
 #UploadPicture()
 #from CloudsightAPI import item
 #SpeakWord(item)
+
+
+
+## Testing to take picture:
+prev_input = 0
+while True:
+  if (GPIO.input(takepicture)):
+    TakePicture()
