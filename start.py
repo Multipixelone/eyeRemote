@@ -34,8 +34,8 @@ GPIO.setup(takepicture,GPIO.IN)
 
 
 
-## Testing to take picture:
-prev_input = 0
-while True:
-  if (GPIO.input(takepicture)):
-    TakePicture()
+## Code to take picture:
+#prev_input = 0
+#while True:
+#  if (GPIO.input(takepicture)):
+#    TakePicture()
