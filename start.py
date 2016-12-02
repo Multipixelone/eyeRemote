@@ -21,8 +21,7 @@ print('Imported Sleeping')
 #Welcome()
 #SpeakWord(WORD)
 
-## Code to upload image.jpg, return a json response, import that, and then speak it out, importing item *might* not be needed, so I will look into that ;)
-## Also, sometimes it doesn't work... I will fix that...
-UploadPicture()
-from CloudsightAPI import item
-SpeakWord(item)
+## Code to upload image.jpg, return a json response, import that, and then speak it out
+#UploadPicture()
+#from CloudsightAPI import item
+#SpeakWord(item)
