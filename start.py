@@ -1,10 +1,9 @@
-# Import Files
+## Import Files
 from TakePicture import TakePicture
+import picamera
 print('Imported Picture Taking')
 import CloudsightAPI
 from CloudsightAPI import UploadPicture
-#from CloudsightAPI import InitilizeCloudsight
-import picamera
 print('Imported Image Uploading')
 import RPi.GPIO as GPIO
 print('Imported GPIO')
@@ -15,13 +14,14 @@ print('Imported Sound Playing')
 from time import sleep
 print('Imported Sleeping')
 
-Welcome()
-#Functions Available:
+## Functions Available:
 #TakePicture()
-UploadPicture()
-#from LocalVariables import LastScan
-from CloudsightAPI import item
+#UploadPicture()
 #ErrorNetwork()
 #Welcome()
 #SpeakWord(WORD)
+
+## Code to upload image.jpg, return a json response, import that, and then speak it out, importing item *might* not be needed, so I will look into that ;)
+UploadPicture()
+from CloudsightAPI import item
 SpeakWord(item)
