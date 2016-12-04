@@ -9,6 +9,10 @@ sudo git clone https://github.com/Multipixelone/BlindRemote.git
 cd ~/BlindRemote
 sudo ./Install.sh
 ```
+## [Optional] Force audio to come out of Headphone Jack (For using a small speaker)
+Run this commands:
+```bash
+amixer cset numid=3 1
+```
 
 Enjoy your remote!
-
