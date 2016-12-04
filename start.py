@@ -1,5 +1,6 @@
 ## Just FYI, this probably COULD be coded cleaner... If you think you could help, feel free to submit a pull request!
 ## Import Files
+print('BlindRemote by Multipixelone on Github.')
 from TakePicture import TakePicture
 import picamera
 from LocalVariables import takepicture
@@ -33,7 +34,7 @@ GPIO.setup(takepicture,GPIO.IN)
 #SpeakWord(item)
 
 ## Code to take picture:
-#prev_input = 0
+#print('Waiting for inputs!')
 #while True:
 #  if (GPIO.input(takepicture)):
 #    TakePicture()
