@@ -42,13 +42,17 @@ GPIO.setup(takepicture,GPIO.IN)
 
 
 ## Actual code now: 
-
+Welcome()
 print('Waiting for inputs!')
 while True:
   if (GPIO.input(takepicture)):
     TakePicture()
-    UploadPicture()
-    from CloudsightAPI import item
-    SpeakWord(item)
+    try:
+        UploadPicture()
+    except ConnectionError:
+         ErrorNetwork()
+    else:
+         from CloudsightAPI import item
+         SpeakWord(item)
 
     
