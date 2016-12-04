@@ -10,7 +10,7 @@ cd ~/BlindRemote
 sudo ./Install.sh
 ```
 ## [Optional] Force audio to come out of Headphone Jack (For using a small speaker)
-Run this commands:
+Run this command:
 ```bash
 amixer cset numid=3 1
 ```
