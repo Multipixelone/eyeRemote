@@ -24,6 +24,9 @@ then
     echo -n "Enter your Cloudsight API Key [ENTER]: "
     read key
     echo "key = '$key'" > LocalVariables.py
+    echo -n "Enter your Cloudsight secret key [ENTER]: "
+    read secret
+    echo "secret = '$secret'" >> LocalVariables.py
     echo -n "Enter the GPIO Pin for shutting down the Pi (BCM) [ENTER]: "
     read sdownpin
     echo
