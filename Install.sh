@@ -38,7 +38,7 @@ then
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     touch tmpcron
     echo "@reboot python /home/pi/BlindRemote/ShutdownWhenPress.py &" >> tmpcron
-    echo "@reboot python /home/pi/BlindRemote/start.py &" >> tmpcron
+    echo "@reboot sh /home/pi/BlindRemote/start.sh &" >> tmpcron
     crontab tmpcron
     rm tmpcron
     sleep 1
