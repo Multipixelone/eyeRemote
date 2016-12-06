@@ -5,9 +5,9 @@ from TakePicture import TakePicture
 import picamera
 from LocalVariables import takepicture
 print('Imported Picture Taking')
-import CloudsightAPI
-from CloudsightAPI import UploadPicture
-import requests
+import Cloudsight
+from Cloudsight import UploadPicture
+import cloudsight
 print('Imported Image Uploading')
 import RPi.GPIO as GPIO
 print('Imported GPIO')
@@ -50,7 +50,7 @@ while True:
     TakePicture()
     try:
         UploadPicture()
-    except requests.ConnectionError:
+    except cloudsight.ConnectionError: ## Might need to be changed after the program shift
          ErrorNetwork()
     else:
          from CloudsightAPI import item
