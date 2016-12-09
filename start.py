@@ -47,6 +47,7 @@ Welcome()
 print('Waiting for inputs!')
 while True:
   if (GPIO.input(takepicture)):
+    SpeakWord("Taking Picture")
     TakePicture()
     try:
         UploadPicture()
