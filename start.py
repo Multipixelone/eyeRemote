@@ -1,6 +1,6 @@
 ## Just FYI, this probably COULD be coded cleaner... If you think you could help, feel free to submit a pull request!
 ## Import Files
-print('BlindRemote by Multipixelone on Github.')
+print('eyeRemote by Multipixelone on Github.')
 from TakePicture import TakePicture
 import picamera
 from LocalVariables import takepicture
