@@ -8,6 +8,7 @@ print('Imported Picture Taking')
 import Cloudsight
 from Cloudsight import UploadPicture
 import cloudsight
+import requests
 print('Imported Image Uploading')
 import RPi.GPIO as GPIO
 print('Imported GPIO')
@@ -20,7 +21,7 @@ print('Imported Sleeping')
 
 ## Setup GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(takepicture,GPIO.IN)
+GPIO.setup(takepicture, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 ## Functions Available:
 #TakePicture()
@@ -46,15 +47,16 @@ GPIO.setup(takepicture,GPIO.IN)
 Welcome()
 print('Waiting for inputs!')
 while True:
-  if (GPIO.input(takepicture)):
+  input_state = GPIO.input(takepicture)
+  if input_state == False:
     SpeakWord("Taking Picture")
     TakePicture()
     try:
         UploadPicture()
-    except cloudsight.ConnectionError: ## Might need to be changed after the program shift
+    except requests.ConnectionError: ## Might need to be changed after the program shift
          ErrorNetwork()
     else:
-         from CloudsightAPI import item
+         from Cloudsight import item
          SpeakWord(item)
 
     
