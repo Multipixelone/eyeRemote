@@ -1,3 +1,4 @@
 #!/bin/bash
-sleep 30s
-python /home/pi/BlindRemote/start.py
+cd /home/pi/eyeRemote
+sleep 3s
+python /home/pi/eyeRemote/start.py
