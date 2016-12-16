@@ -6,7 +6,7 @@ Clone the Repository and Run Install Script:
 ```bash
 cd ~
 sudo git clone https://github.com/Multipixelone/eyeRemote.git
-cd ~/BlindRemote
+cd ~/eyeRemote
 sudo ./Install.sh
 ```
 ## [Optional] Force audio to come out of Headphone Jack (For using a small speaker)
