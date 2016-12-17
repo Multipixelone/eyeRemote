@@ -39,7 +39,7 @@ then
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     touch tmpcron
-    sed -i '1ipython /home/pi/BlindRemote/ShutdownWhenPress.py &' /etc/rc.local
+    #sed -i '1ipython /home/pi/BlindRemote/ShutdownWhenPress.py &' /etc/rc.local
     sed -i '1i./home/pi/BlindRemote/start.sh &' /etc/rc.local
     #echo "@reboot python /home/pi/BlindRemote/ShutdownWhenPress.py &" >> tmpcron
     #echo "@reboot sh /home/pi/BlindRemote/start.sh &" >> tmpcron
