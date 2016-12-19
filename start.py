@@ -45,6 +45,7 @@ GPIO.setup(takepicture, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 ## Actual code now: 
 Welcome()
+SpeakWord("Ready to test!")
 print('Waiting for inputs!')
 while True:
   input_state = GPIO.input(takepicture)
@@ -52,11 +53,20 @@ while True:
     SpeakWord("Taking Picture")
     TakePicture()
     try:
+        file = open(Tests/Tests, 'w')
+        number = raw_input('What is the number of the object you are scanning? [1-100] ')
+        name = raw_input('What is the object you are scanning? [NAME] ')
+        distance = raw_input('What is the relative distance? [INCHES] '
         UploadPicture()
     except requests.ConnectionError: ## Might need to be changed after the program shift
          ErrorNetwork()
     else:
          from Cloudsight import item
+         file.write(number)
+         file.write(name)
+         file.write(distance)
+         file.write(item)                    
+         file.close()
          SpeakWord(item)
 
     
