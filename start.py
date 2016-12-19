@@ -49,8 +49,8 @@ print('Waiting for inputs!')
 while True:
   input_state = GPIO.input(takepicture)
   if input_state == False:
-    SpeakWord("Taking Picture")
     TakePicture()
+    SpeakWord("Picture Taken")
     try:
         UploadPicture()
     except requests.ConnectionError: ## Might need to be changed after the program shift
