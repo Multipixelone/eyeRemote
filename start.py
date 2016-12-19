@@ -18,6 +18,8 @@ from PlaySounds import SpeakWord
 print('Imported Sound Playing')
 from time import sleep
 print('Imported Sleeping')
+#file = "Tests/Tests.txt"
+#path = os.getcwd()+file 
 
 ## Setup GPIO
 GPIO.setmode(GPIO.BCM)
@@ -52,21 +54,23 @@ while True:
   if input_state == False:
     SpeakWord("Taking Picture")
     TakePicture()
+    SpeakWord("Ready for data")
     try:
-        file = open(Tests/Tests, 'w')
-        number = raw_input('What is the number of the object you are scanning? [1-100] ')
+        file = open("Tests/Tests", 'a+')
+        number = raw_input('What is the number of the object you are scanning? [1-...] ')
         name = raw_input('What is the object you are scanning? [NAME] ')
-        distance = raw_input('What is the relative distance? [INCHES] '
-        UploadPicture()
+        distance = raw_input('What is the relative distance? [CENTIMETER] ')
+	UploadPicture()
     except requests.ConnectionError: ## Might need to be changed after the program shift
-         ErrorNetwork()
+        ErrorNetwork()
     else:
-         from Cloudsight import item
-         file.write(number)
-         file.write(name)
-         file.write(distance)
-         file.write(item)                    
-         file.close()
-         SpeakWord(item)
+        from Cloudsight import item
+	file.write("\n")
+        file.write(number + "\n")
+        file.write(name + "\n")
+        file.write(distance + "\n")
+        file.write(item + "\n")                    
+        file.close()
+        SpeakWord(item)
 
     
