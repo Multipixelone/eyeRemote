@@ -11,3 +11,5 @@ def SpeakWord( word ):
 	tts = gTTS(text=word, lang='en')
 	tts.save("Sounds/LastSpoken.mp3")
 	s.sudo("mpg123 Sounds/LastSpoken.mp3").run()
+def PictureTaken():
+	s.sudo("mpg123 Sounds/Picture.mp3").run()

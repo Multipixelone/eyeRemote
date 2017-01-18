@@ -2,11 +2,10 @@
 ## Import Files
 print('eyeRemote by Multipixelone on Github.')
 from TakePicture import TakePicture
-import picamera
 from LocalVariables import takepicture
 print('Imported Picture Taking')
-import Cloudsight
 from Cloudsight import UploadPicture
+from cloudsight import errors
 import cloudsight
 import requests
 print('Imported Image Uploading')
@@ -15,6 +14,7 @@ print('Imported GPIO')
 from PlaySounds import Welcome
 from PlaySounds import ErrorNetwork
 from PlaySounds import SpeakWord
+from PlaySounds import PictureTaken
 print('Imported Sound Playing')
 from time import sleep
 print('Imported Sleeping')
@@ -50,11 +50,13 @@ while True:
   input_state = GPIO.input(takepicture)
   if input_state == False:
     TakePicture()
-    SpeakWord("Picture Taken")
+    PictureTaken()
     try:
-        UploadPicture()
+         UploadPicture()
     except requests.ConnectionError: ## Might need to be changed after the program shift
          ErrorNetwork()
+    except errors.APIError:
+         SpeakWord("Invalid Cloudsight Key, please run install script")
     else:
          from Cloudsight import item
          SpeakWord(item)
