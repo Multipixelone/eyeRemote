@@ -34,7 +34,7 @@ then
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
     touch tmpcron
-    sed -i '1i./home/pi/BlindRemote/start.sh &' /etc/rc.local
+    sed -i '1i./home/pi/eyeRemote/start.sh &' /etc/rc.local
     sleep 1
     printf "\nNow Rebooting...\n"
     sleep 1
