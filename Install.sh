@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # What this script is doing
-printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones eyeRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n"
+printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones eyeRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n A working internet is REQUIRED on first install\n"
 
 # You sure?
 read -r -p "Proceed with Install? [y/N]"
@@ -33,7 +33,6 @@ then
     echo
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
-    touch tmpcron
     sed -i '1i./home/pi/eyeRemote/start.sh &' /etc/rc.local
     sleep 1
     printf "\nNow Rebooting...\n"
