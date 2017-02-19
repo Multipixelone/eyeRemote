@@ -4,10 +4,10 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 # What this script is doing
-printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones eyeRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n A working internet is REQUIRED on first install\n"
+printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones eyeRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\nA working internet is REQUIRED on first install\n"
 
 # You sure?
-read -r -p "Proceed with Install? [y/N]"
+read -r -p "Proceed with Install? [y/n]"
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
