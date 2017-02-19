@@ -34,9 +34,8 @@ then
     echo "shutdownpin = $sdownpin" >> LocalVariables.py
     echo -n "Enter your GPIO Pin for taking a picture (BCM) [ENTER]: "
     read tpicturepin
-    echo
     echo "takepicture = $tpicturepin" >> LocalVariables.py
-    printf "\n\n\n\n\nInstall Complete!\n Adding to Startup..."
+    printf "\n\n\n\n\nInstall Complete!\nAdding to Startup..."
     sed -i '1i./home/pi/eyeRemote/start.sh &' /etc/rc.local
     sleep 1
     printf "\nNow Rebooting...\n"
