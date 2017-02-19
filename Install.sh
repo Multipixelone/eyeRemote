@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root. Try running the command with 'sudo' preceding it" 1>&2
+    exit 1
+fi
 # What this script is doing
 printf "Do you know what this script is doing?\n\nJust checking, but you should really know! This script installs all the dependances required for Multipixelones eyeRemote, and then adds it to startup.\n\nThis will convert your Pi into a talking remote. :)\n\nJust making sure :D\n A working internet is REQUIRED on first install\n"
 
