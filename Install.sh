@@ -36,7 +36,8 @@ then
     read tpicturepin
     echo "takepicture = $tpicturepin" >> LocalVariables.py
     printf "\n\n\n\n\nInstall Complete!\nAdding to Startup..."
-    sed -i '1ibash /home/pi/eyeRemote/start.sh &' /etc/rc.local
+    mv /home/pi/eyeRemote/eyeremote /etc/init.d/
+    update-rc.d eyeremote defaults
     sleep 1
     printf "\nNow Rebooting...\n"
     sleep 1
