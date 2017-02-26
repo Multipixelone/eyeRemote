@@ -57,6 +57,8 @@ while True:
          ErrorNetwork()
     except errors.APIError:
          SpeakWord("Invalid Cloudsight Key, please run install script")
+    except KeyError:
+         SpeakWord("Error Recognizing. Try something else") 
     else:
          from Cloudsight import item
          SpeakWord(item)

@@ -13,3 +13,5 @@ def SpeakWord( word ):
 	s.sudo("mpg123 Sounds/LastSpoken.mp3").run()
 def PictureTaken():
 	s.sudo("mpg123 Sounds/Picture.mp3").run()
+def Shutdown():
+	s.sudo("mpg123 Sounds/Shutdown.mp3").run()
