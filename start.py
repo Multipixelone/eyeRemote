@@ -1,4 +1,3 @@
-## Just FYI, this probably COULD be coded cleaner... If you think you could help, feel free to submit a pull request!
 ## Import Files
 print('eyeRemote by Multipixelone on Github.')
 from TakePicture import TakePicture
@@ -53,7 +52,7 @@ while True:
     PictureTaken()
     try:
          UploadPicture()
-    except requests.ConnectionError: ## Might need to be changed after the program shift
+    except requests.ConnectionError:
          ErrorNetwork()
     except errors.APIError:
          SpeakWord("Invalid Cloudsight Key, please run install script")
